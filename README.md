@@ -4,6 +4,7 @@ This project is divided into two main folders: Client and Server. Because I don'
 Server folder contains: 
   + server.py: Main processing file for server. If you use this app as a server user, run this file.
   + may be I'll add some other files in the future.
+
 Client folder contains:
   + client.py: Main processing file for client. If you use this app as a client user, run this file.
   + pic.py: Main processing for screen capture function.
