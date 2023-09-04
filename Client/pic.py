@@ -5,7 +5,7 @@ from PIL import Image
 import struct
 import datetime
 
-class screenCaptureWindow:
+class ScreenCapture:
     def __init__(self, client, client_socket):
         self.client = client
         self.client.client_socket = client_socket
