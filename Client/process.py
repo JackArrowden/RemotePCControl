@@ -2,7 +2,7 @@ import socket
 import tkinter as tk
 from tkinter import ttk
 from kill import KillProcess
-from start import StartProcess
+from startProcess import StartProcess
 import struct
 
 class listProcess:
