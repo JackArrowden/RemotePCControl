@@ -18,3 +18,6 @@ Client folder contains:
   + keylog.py: Main processing for functions that do the work for keylogging.
 
 There are some extra libraries that you may not have, so that you need to install them if you want to use this app:
+  + PIL (Pillow)
+  + struct
+  + datetime
