@@ -1,11 +1,11 @@
 import tkinter as tk
 import socket
-from keylog import KeylogWindow
-from pic import screenCaptureWindow
-from app import listApp
-from process import listProcess
+from keylog import Keylog
+from pic import ScreenCapture
+from app import App
+from process import Process
 
-class ClientApp:
+class Client:
     def __init__(self, root):
         def on_entry_click(event):
             if root.entry.get() == default_text:
@@ -89,7 +89,7 @@ class ClientApp:
             return
 
         self.client_socket.sendall("APPLICATION".encode())
-        listOfApp = listApp(self, self.client_socket)
+        app = App(self, self.client_socket)
 
     def shutdown_server(self):
         if not self.connect_status:
@@ -113,7 +113,7 @@ class ClientApp:
             return
 
         self.client_socket.sendall("TAKEPIC".encode())
-        screenCapture = screenCaptureWindow(self, self.client_socket)
+        screenCapture = ScreenCapture(self, self.client_socket)
         screenCapture.request_screenshot()
         screenCapture.on_closing()
 
@@ -123,7 +123,7 @@ class ClientApp:
             return
 
         self.client_socket.sendall("KEYLOG".encode())
-        keyLog = KeylogWindow(self, self.client_socket)
+        keyLog = Keylog(self, self.client_socket)
 
     def list_processes(self):
         if not self.connect_status:
@@ -131,9 +131,9 @@ class ClientApp:
             return
 
         self.client_socket.sendall("PROCESS".encode())
-        listOfProcess = listProcess(self, self.client_socket)
+        process = Process(self, self.client_socket)
 
 if __name__ == "__main__":
     root = tk.Tk()
-    app = ClientApp(root)
+    app = Client(root)
     root.mainloop()
