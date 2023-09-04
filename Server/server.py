@@ -7,7 +7,7 @@ from PIL import ImageGrab
 import psutil
 import keyboard
 
-class ServerApp:
+class Server:
     ### init: 1 func
     def __init__(self, root):
         
@@ -354,5 +354,5 @@ class ServerApp:
 
 if __name__ == "__main__":
     root = tk.Tk()
-    app = ServerApp(root)
+    app = Server(root)
     root.mainloop()
