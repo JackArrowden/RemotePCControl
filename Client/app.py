@@ -1,11 +1,11 @@
 import socket
 import tkinter as tk
 from tkinter import ttk
-from kill import KillProcess
+from kill import Kill
 from startApp import StartApp
 import struct
 
-class listApp:
+class App:
     def __init__(self, client, client_socket):
         self.client = client
         self.client.client_socket = client_socket        
