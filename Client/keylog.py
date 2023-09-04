@@ -2,7 +2,7 @@ import tkinter as tk
 import socket
 import struct
 
-class KeylogWindow:
+class Keylog:
     def __init__(self, client, client_socket):
         self.client = client
         self.client.client_socket = client_socket
