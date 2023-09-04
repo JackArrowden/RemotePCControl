@@ -1,7 +1,7 @@
 import tkinter as tk
 import socket
 
-class KillProcess:
+class Kill:
     def __init__(self, client, client_socket):
         def on_entry_click(event):
             if self.txtID.get() == default_text:
