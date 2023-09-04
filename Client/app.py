@@ -69,7 +69,7 @@ class App:
 
     def kill_app(self):
         self.client.client_socket.sendall("KILL".encode())
-        kill_app = KillProcess(self.client, self.client.client_socket)
+        kill_app = Kill(self.client, self.client.client_socket)
 
     def start_app(self):
         self.client.client_socket.sendall("START".encode())
