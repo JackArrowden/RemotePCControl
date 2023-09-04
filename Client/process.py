@@ -64,7 +64,7 @@ class Process:
 
     def kill_processes(self):
         self.client.client_socket.sendall("KILL".encode())
-        kill_processes = KillProcess(self.client, self.client.client_socket)
+        kill_processes = Kill(self.client, self.client.client_socket)
 
     def start_processes(self):
         self.client.client_socket.sendall("START".encode())
